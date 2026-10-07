@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SHORTLIST — know if the job is real, then get on the shortlist</title>
+<meta name="description" content="Ghost Radar flags scam and ghost jobs before you waste an hour tailoring. Then match, rewrite, and chase — the workflow that lifts callbacks ~20%.">
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap brand">
+    <div class="mark" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+        <path d="M4 6h11M4 12h7M4 18h13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="19" cy="12" r="2.6" fill="#fff"/>
+      </svg>
+    </div>
+    <div>
+      <h1>SHORTLIST</h1>
+      <div class="tag">Know if the job is real. Then get on the shortlist.</div>
+    </div>
+    <div class="pill" id="health">connecting…</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <h2>Stop applying to jobs that <em>do not exist</em>.</h2>
+    <p>57.5% of job seekers say being ghosted is their number-one frustration — for the third
+       year running. Meanwhile 41% have hit an outright scam job, and in Nigeria people lose
+       ₦20,000 to ₦500,000 to recruiters who simply ask them to pay first. Every existing tool
+       optimises your resume. None of them tell you whether the job is real.</p>
+    <div class="stats">
+      <div class="stat"><b>57.5%</b><span>ghosted after applying — the top frustration three years running (iHire 2026)</span></div>
+      <div class="stat"><b>41.2%</b><span>hit a fake or scam job in the past year (iHire 2026)</span></div>
+      <div class="stat"><b>92%</b><span>of ATS rank rather than auto-reject — the real risk is invisibility (Enhancv 2025)</span></div>
+      <div class="stat"><b>~20%</b><span>callback lift from following up. 57% never do (Resume Worded, n=1,200)</span></div>
+    </div>
+  </section>
+
+  <nav role="tablist">
+    <button class="on" data-t="ghost" role="tab">1 · Ghost Radar<sup>new</sup></button>
+    <button data-t="match" role="tab">2 · ATS Match</button>
+    <button data-t="bullets" role="tab">3 · Bullet Lab</button>
+    <button data-t="followup" role="tab">4 · Follow-up Autopilot</button>
+    <button data-t="pipeline" role="tab">5 · Pipeline</button>
+  </nav>
+</div>
+
+<main class="wrap">
+
+<!-- ==================== 1. GHOST RADAR ==================== -->
+<section class="tab on" id="t-ghost">
+  <div class="card">
+    <h3>Ghost Radar</h3>
+    <div class="sub">Run this <b>before</b> you spend 45 minutes tailoring. A ghost costs you time;
+      a scam costs you money. This tells you which one you are looking at.</div>
+
+    <div class="grid g2">
+      <div>
+        <label for="g-title">Job title</label>
+        <input id="g-title" placeholder="Senior Backend Engineer">
+      </div>
+      <div>
+        <label for="g-company">Company / organisation</label>
+        <input id="g-company" placeholder="Acme Fintech Ltd">
+      </div>
+    </div>
+
+    <div style="margin-top:14px">
+      <label for="g-jd">Job description <span style="text-transform:none;color:var(--dim2)">(paste the full posting)</span></label>
+      <textarea id="g-jd" placeholder="Paste the job description here…"></textarea>
+    </div>
+
+    <div style="margin-top:14px">
+      <label for="g-contact">The recruiter's message to you <span style="text-transform:none;color:var(--dim2)">(WhatsApp, SMS, email — paste it verbatim)</span></label>
+      <textarea id="g-contact" style="min-height:96px" placeholder="Paste the exact message they sent you…"></textarea>
+    </div>
+
+    <div class="grid g3" style="margin-top:14px">
+      <div>
+        <label for="g-email">Recruiter's email</label>
+        <input id="g-email" placeholder="talent@company.com">
+      </div>
+      <div>
+        <label for="g-site">Company website</label>
+        <input id="g-site" placeholder="company.com">
+      </div>
+      <div>
+        <label for="g-channel">How did they reach you?</label>
+        <select id="g-channel">
+          <option value="">— select —</option>
+          <option value="company_portal">Company careers page / ATS</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="telegram">Telegram</option>
+          <option value="sms">SMS / text</option>
+          <option value="phone">Phone call</option>
+          <option value="instagram">Instagram / Facebook / X</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid g3" style="margin-top:14px">
+      <div>
+        <label for="g-age">Listing age (days)</label>
+        <input id="g-age" type="number" min="0" placeholder="e.g. 12">
+      </div>
+      <div>
+        <label for="g-apps">Applicants shown</label>
+        <input id="g-apps" type="number" min="0" placeholder="e.g. 100">
+      </div>
+      <div>
+        <label for="g-interview">Interview format offered</label>
+        <select id="g-interview">
+          <option value="">— select —</option>
+          <option value="onsite">In person</option>
+          <option value="video">Video call</option>
+          <option value="phone">Phone call</option>
+          <option value="text_only">Text / chat only</option>
+          <option value="none">No interview at all</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:14px">
+      <div>
+        <label for="g-payto">If payment is mentioned, where does it go?</label>
+        <select id="g-payto">
+          <option value="none">No payment mentioned</option>
+          <option value="individual">A personal / individual account</option>
+          <option value="official">Official corporate or Remita account</option>
+          <option value="unknown">Unclear</option>
+        </select>
+      </div>
+      <div style="display:flex;gap:18px;align-items:center;padding-top:20px;flex-wrap:wrap">
+        <label class="check"><input type="checkbox" id="g-pay"> Payment requested of you</label>
+        <label class="check"><input type="checkbox" id="g-unsol"> They contacted you first</label>
+        <label class="check"><input type="checkbox" id="g-repost"> Role keeps being reposted</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <label class="check" style="margin-right:auto">
+        <select id="g-salary" style="width:auto;padding:7px 30px 7px 11px;font-size:12.5px">
+          <option value="">Salary: unknown</option>
+          <option value="true">Salary stated</option>
+          <option value="false">No salary stated</option>
+        </select>
+      </label>
+      <button class="btn ghost sm" id="g-sample-scam">Load scam example</button>
+      <button class="btn ghost sm" id="g-sample-ghost">Load ghost example</button>
+      <button class="btn ghost sm" id="g-sample-clean">Load clean example</button>
+      <button class="btn" id="g-run">Run Ghost Radar</button>
+    </div>
+  </div>
+  <div class="out" id="o-ghost"></div>
+</section>
+
+<!-- ==================== 2. ATS MATCH ==================== -->
+<section class="tab" id="t-match">
+  <div class="card">
+    <h3>ATS Match &amp; recruiter-search simulation</h3>
+    <div class="sub">Not a promise to "beat the filter". This shows you where you'd actually rank,
+      what you're missing, and the literal boolean string a recruiter would type to find someone like you.</div>
+    <div class="grid g2">
+      <div>
+        <label for="m-jd">Job description</label>
+        <textarea id="m-jd" style="min-height:260px" placeholder="Paste the job description…"></textarea>
+      </div>
+      <div>
+        <label for="m-resume">Your resume (paste as text)</label>
+        <textarea id="m-resume" style="min-height:260px" placeholder="Paste your resume text…"></textarea>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div>
+        <label for="m-pool">Estimated applicants</label>
+        <input id="m-pool" type="number" value="180" min="5">
+      </div>
+      <div>
+        <label for="m-rev">How many the recruiter actually reads</label>
+        <input id="m-rev" type="number" value="20" min="1">
+      </div>
+    </div>
+    <div class="row">
+      <button class="btn ghost sm" id="m-sample">Load worked example</button>
+      <button class="btn" id="m-run" style="margin-left:auto">Analyse match</button>
+    </div>
+  </div>
+  <div class="out" id="o-match"></div>
+</section>
+
+<!-- ==================== 3. BULLET LAB ==================== -->
+<section class="tab" id="t-bullets">
+  <div class="card">
+    <h3>Bullet Lab</h3>
+    <div class="sub">35% of job seekers say turning duties into achievements is the hardest part of
+      updating a resume. This diagnoses each bullet and tells you the one question whose answer fixes it.
+      It will not invent numbers for you — fabricated metrics get people fired.</div>
+    <label for="b-resume">Paste your resume, or individual bullets</label>
+    <textarea id="b-resume" style="min-height:220px" placeholder="- Responsible for handling customer queries&#10;- Assisted with monthly reporting"></textarea>
+    <div class="row">
+      <button class="btn ghost sm" id="b-sample">Load weak example</button>
+      <button class="btn" id="b-run" style="margin-left:auto">Diagnose bullets</button>
+    </div>
+  </div>
+  <div class="out" id="o-bullets"></div>
+</section>
+
+<!-- ==================== 4. FOLLOW-UP ==================== -->
+<section class="tab" id="t-followup">
+  <div class="card">
+    <h3>Follow-up Autopilot</h3>
+    <div class="sub">57% of candidates never follow up. Those who do, within 1–2 weeks, see roughly a
+      20% lift in callbacks. This builds the dated schedule and writes the emails.</div>
+    <div class="grid g3">
+      <div>
+        <label for="f-stage">Stage</label>
+        <select id="f-stage">
+          <option value="applied">I submitted an application</option>
+          <option value="phone_screen">I had a phone screen</option>
+          <option value="interview">I had an interview</option>
+          <option value="offer_pending">An offer is pending</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-anchor">Date that happened</label>
+        <input id="f-anchor" type="date">
+      </div>
+      <div>
+        <label for="f-timeline">Timeline they gave you (optional)</label>
+        <input id="f-timeline" placeholder="e.g. three weeks">
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div>
+        <label for="f-you">Your name</label>
+        <input id="f-you" placeholder="Ada Obi">
+      </div>
+      <div>
+        <label for="f-them">Recruiter / hiring manager name</label>
+        <input id="f-them" placeholder="Ngozi Bello">
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div>
+        <label for="f-role">Role</label>
+        <input id="f-role" placeholder="Data Analyst">
+      </div>
+      <div>
+        <label for="f-company">Company</label>
+        <input id="f-company" placeholder="GTBank">
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <label for="f-hook">Your hook — one specific, true thing that makes you memorable</label>
+      <input id="f-hook" placeholder="I cut reporting turnaround by 40% at my last role.">
+    </div>
+    <div class="row">
+      <button class="btn" id="f-run" style="margin-left:auto">Build my chase schedule</button>
+    </div>
+  </div>
+  <div class="out" id="o-followup"></div>
+</section>
+
+<!-- ==================== 5. PIPELINE ==================== -->
+<section class="tab" id="t-pipeline">
+  <div class="card">
+    <h3>Pipeline</h3>
+    <div class="sub">Everything Ghost Radar blocks is tracked here as money you did not lose.
+      Save an application from any tab, or add one manually.</div>
+    <div class="grid g3">
+      <div><label for="p-company">Company</label><input id="p-company" placeholder="Acme Ltd"></div>
+      <div><label for="p-role">Role</label><input id="p-role" placeholder="Analyst"></div>
+      <div>
+        <label for="p-stage">Stage</label>
+        <select id="p-stage">
+          <option value="found">Found</option><option value="vetted">Vetted</option>
+          <option value="applied">Applied</option><option value="following_up">Following up</option>
+          <option value="interview">Interview</option><option value="offer">Offer</option>
+          <option value="rejected">Closed</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid g3" style="margin-top:14px">
+      <div><label for="p-ghost">Ghost score (0–100)</label><input id="p-ghost" type="number" value="0" min="0" max="100"></div>
+      <div><label for="p-match">Match rate (0–100)</label><input id="p-match" type="number" value="0" min="0" max="100"></div>
+      <div style="display:flex;align-items:flex-end"><button class="btn" id="p-add" style="width:100%">Add to pipeline</button></div>
+    </div>
+  </div>
+  <div id="o-pipeline"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><b style="color:var(--txt)">SHORTLIST</b> — every rule is traceable to published research.
+      Sources: iHire <i>State of Online Recruiting 2026</i>, Resume Genius <i>2026 Job Seeker Insights
+      Report</i>, Enhancv 2025 recruiter study (n=25, 10+ ATS platforms), Resume Worded (n=1,200),
+      FlexJobs <i>30 Job Scams 2026</i>, VidCruiter, HideJobs, jobsolv, job200/Huntr (240,000
+      applications), Recruitment Boss NG 2026, Punch NG, NewsClick NG, Peoples Gazette.</p>
+    <p style="margin-top:10px">This tool gives you evidence, not a verdict on a specific employer.
+      Verify independently before acting. Nothing here is legal advice.</p>
+  </div>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
